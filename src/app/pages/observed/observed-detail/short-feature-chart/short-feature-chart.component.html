@@ -1,0 +1,40 @@
+<!-- <mat-form-field style="margin-top:20px; " >
+    <mat-label>选择历史</mat-label>
+    <mat-select [(ngModel)]="currentValue" (selectionChange)="selectionChange($event)">
+      <mat-option [value]="item.value" *ngFor="let item of pointSelectorData">{{item.name}}</mat-option>      
+    </mat-select>
+</mat-form-field> -->
+<div class="card">
+  <div class="card-body">
+    <div class="row">
+      <div class="col-xl-8" style="padding-left:0px; padding-right: 0px;">
+        <div id="chart2" class="div-col" [style.height]="curHeight"></div>
+      </div>
+      <div class="col-xl-4" style="padding-left:0px; padding-right: 0px;">
+        <div class="row" style="padding-left:0px; padding-right: 0px;">
+          <div class="col-xl-8" style="padding-left:0px; padding-right: 0px;">
+            <div class="demo-inline-calendar-card">
+              <mat-calendar [(selected)]="selected" (selectedChange)="onDateSelected($event)"></mat-calendar>
+            </div>
+          </div>
+          <div class="col-xl-4" style="padding-left:0px; padding-right: 0px;">
+            <div class="mb-2" style="margin-left: 10px;">
+              <h3 class="card-title mb-4">历史涨停</h3>
+            </div>
+            <div class="d-flex" style="overflow-y: auto; width:100%; " [style.height]="curRightSideHeight">
+              <ul style="margin-left: -10px;">
+                <li *ngFor="let item of pointSelectorData" (dblclick)="selectHotTrade(item.value)" style="cursor:pointer; height: 30px; ">
+                  <span class="font-size-14" style="border-bottom:solid 0.08em #eee;">
+                    {{ item.value }}
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>      
+    </div>
+  </div>
+</div>
+
+

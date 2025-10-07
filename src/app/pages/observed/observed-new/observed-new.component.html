@@ -1,0 +1,26 @@
+<div class="container-fluid">  
+  <ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '14px' }"></ngx-loading>
+  <div class="row">
+    <div class="col-lg-7" >
+      <div class="card">
+        <div class="card-body" >
+          <app-chart-bar [chartData]="chartTrend" [chartTitle]="chartTrendTitle"></app-chart-bar>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-5" >
+      <div class="card">
+        <div class="card-body" >
+          <app-chart-pie [items]="tableCoverage"></app-chart-pie>
+        </div>
+      </div>
+    </div>
+    <!--end col-->
+  </div>
+  <!--end row-->
+  <div class="row">
+    <div class="col-12" >      
+      <app-chart-table [tableData]="tableData" (filterEvent)="changeTableData($event)"></app-chart-table>
+    </div>
+  </div>
+</div>

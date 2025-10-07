@@ -1,0 +1,87 @@
+table {
+  width: 2000px;
+}
+
+.example-container {
+  /* max-width: 2000px; */
+  overflow: auto;
+}
+
+.mat-mdc-form-field {
+  font-size: 14px;
+  /* width: 100%; */
+  color: whitesmoke;
+}
+
+.mat-mdc-row .mat-mdc-cell {
+  border-bottom: 1px solid transparent;
+  border-top: 1px solid transparent;
+  cursor: pointer;
+}
+
+.mat-mdc-row:hover .mat-mdc-cell {
+  border-color: currentColor;
+  border-top: 1px solid transparent;
+}
+
+.mdc-data-table__cell, .mdc-data-table__header-cell {
+  padding: 0 0 0 10px;
+}
+
+.demo-row-is-clicked {
+  font-weight: bold;
+}
+
+
+.table-title{
+  width: 20px; 
+  font-size: 12px; 
+  padding: 5 0 0 10px;
+}
+
+.table-title-1{
+  width: 80px; 
+  font-size: 12px; 
+  padding: 5 0 0 10px;
+}
+
+.table-title-2{
+  width: 110px; 
+  font-size: 12px; 
+  padding: 5 0 0 10px;
+}
+
+.table-title-3{
+  width: 130px; 
+  font-size: 12px; 
+  padding: 5 0 0 10px;
+}
+
+.table-row{
+  font-size: 12px; 
+  font-weight: bold;
+  padding: 0 0 0 0;
+}
+
+.table-row-price{
+  font-size: 12px; 
+  font-weight: bolder;
+  padding: 0 0 0 0;
+}
+
+.mat-mdc-table .mdc-data-table__header-row {
+  height: 30px;
+}
+
+.mat-mdc-table .mdc-data-table__row {
+  height: 30px;
+}
+
+.form-field{
+  padding: 10px 20px 10px 10px;
+}
+
+.form-field-button{
+  text-align: center;
+  padding: 10px 20px 10px 20px;
+}

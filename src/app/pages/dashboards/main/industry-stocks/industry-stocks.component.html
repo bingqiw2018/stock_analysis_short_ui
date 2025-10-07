@@ -1,0 +1,96 @@
+<div class="row">
+  <div class="col-xl-8">
+    <div class="card">
+      <div class="card-body">
+        <ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '14px' }"></ngx-loading>
+        <div class="d-flex">
+          <div class="me-2">
+            <h3 class="card-title mb-4">行业热点</h3>
+          </div>
+        </div>
+        <div class="table-responsive" id="table-industry-hot-top">
+          <table class="table align-middle table-nowrap mb-0">
+            <thead>
+              <tr>
+                <th scope="col" class="font-size-12 text-truncate mb-1">行业</th>
+                <th scope="col" class="font-size-12 text-truncate mb-1">标的总数</th>
+                <th scope="col" class="font-size-12 text-truncate mb-1">上涨</th>
+                <th scope="col" class="font-size-12 text-truncate mb-1">持平</th>
+                <th scope="col" class="font-size-12 text-truncate mb-1">下降</th>
+                <!-- <th scope="col">操作</th> -->
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of industryStocks">
+                <td>
+                  <h5 class="font-size-12 text-truncate mb-1">
+                    <a href="javascript: void(0);" class="text-dark">{{
+                      item.title
+                    }}</a>
+                  </h5>
+                </td>
+                <td>
+                  <h5 class="font-size-12 text-truncate mb-1">{{ item.total }}</h5>
+                </td>
+                <td>
+                  <h5 class="font-size-12 text-truncate mb-1">
+                    {{ item.up_total }}
+                  </h5>
+                </td>
+                <td>
+                  <h5 class="font-size-12 text-truncate mb-1">
+                    {{ item.equal_total }}
+                  </h5>
+                </td>
+                <td>
+                  <h5 class="font-size-12 text-truncate mb-1">
+                    {{ item.down_total }}
+                  </h5>
+                </td>                
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <!-- end card -->
+  </div>
+  <div class="col-xl-4">
+    <div class="card">
+      <div class="card-body">
+        <ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '14px' }"></ngx-loading>
+        <div class="d-flex">
+          <div class="me-2">
+            <h3 class="card-title mb-4">行业上涨排行</h3>
+          </div>
+        </div>
+        <div class="table-responsive" id="table-industry-up-top">
+          <table class="table align-middle table-nowrap mb-0">
+            <thead>
+              <tr>
+                <th scope="col" class="font-size-12 text-truncate mb-1">行业</th>
+                <th scope="col" class="font-size-12 text-truncate mb-1">上涨幅度</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of industryUpStocks">
+                <td>
+                  <h5 class="font-size-12 text-truncate mb-1">
+                    <a href="javascript: void(0);" class="text-dark">{{
+                      item.title
+                    }}</a>
+                  </h5>
+                </td>
+                <td>
+                  <h5 class="font-size-12 text-truncate mb-1">
+                    {{ item.up_total }}
+                  </h5>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

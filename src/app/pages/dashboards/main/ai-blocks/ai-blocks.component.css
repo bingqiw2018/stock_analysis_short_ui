@@ -1,0 +1,8 @@
+.btn-class {
+    padding: 0px 0px 25px 0px;
+    border-left:0px;
+    border-right: 0px;
+    height: 15px;
+    width: 58px;
+    font-weight: bolder;
+}

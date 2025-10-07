@@ -1,0 +1,20 @@
+<div class="container-fluid">
+  <ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '14px' }"></ngx-loading>
+  <!-- <div class="row">
+    <div class="col-lg-4">
+      <app-chart-pie [items]="tableCoverage" [pieId]="pie_id_template" [config]="config"></app-chart-pie>
+    </div>
+    <div class="col-lg-4">
+      <app-chart-pie [items]="tableCoverageStrong" [pieId]="pie_strong_id_template"  [config]="configStrong"></app-chart-pie>
+    </div>
+    <div class="col-lg-4">
+      <app-chart-pie [items]="tableCoverageWeek" [pieId]="pie_week_id_template"  [config]="configWeek"></app-chart-pie>
+    </div>
+  </div> -->
+  <!--end row-->
+  <div class="row">
+    <div class="col-12">
+      <app-chart-table [pageTitle]="pageTitle" [tableData]="tableData" [displayedColumns]="displayedColumns" (filterEvent)="changeTableData($event)"></app-chart-table>
+    </div>
+  </div>
+</div>

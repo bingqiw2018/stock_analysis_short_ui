@@ -1,0 +1,58 @@
+<div class="row">
+  <div [class]="classLeft" style="padding:1px">
+    <div class="card">
+      <div class="card-body" style="padding-left:10px; padding-right: 10px;">
+        <ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '14px' }"></ngx-loading>
+        <div id="chart_stock_day_index" ></div>
+      </div>
+    </div>
+  </div>
+
+  <div [class]="classRight" style="padding:1px">
+    <div class="card">
+      <div class="card-body" style="padding:10px 10px 10px 10px">
+        <ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '14px' }"></ngx-loading>
+        <ngx-simplebar id="last_index_list">
+          <ul class="verti-timeline list-unstyled">
+            <li class="event-list active" *ngFor="let item of release">
+              <div class="event-timeline-dot">
+                <i
+                  class="bx bxs-right-arrow-circle font-size-10 bx-fade-right"
+                ></i>
+              </div>
+              <div class="d-flex">
+                <div class="flex-shrink-0 me-3">
+                  <h5 class="font-size-14">
+                    {{item.date}}
+                    <i
+                      class="bx bx-right-arrow-alt font-size-10 text-primary align-middle ms-2"
+                    ></i>
+                  </h5>
+                </div>
+                <div class="flex-grow-1">
+                  <div>
+                    <h5 class="font-size-10 mb-0">股淘：
+                      <span [class]="item.ai_index>0?'item_red':'item_green'">{{item.ai_index}} %</span>
+                    </h5> 
+                    <h5 class="font-size-10 mb-0">VS</h5> 
+                    <h5 class="font-size-10 mb-0">沪深300：<span [class]="item.hs300>0?'item_red':'item_green'">{{item.hs300}}  %</span></h5> 
+                    <h5 class="font-size-10 mb-0">科创50：<span [class]="item.kc50>0?'item_red':'item_green'">{{item.kc50}}  %</span></h5>
+                  </div>
+                </div>
+              </div>
+            </li>
+            
+          </ul>
+        </ngx-simplebar>
+
+        <!-- <div class="text-center mt-4">
+          <a
+            href="javascript:void(0);"
+            class="btn btn-primary waves-effect waves-light btn-sm"
+            >View More <i class="mdi mdi-arrow-right ms-1"></i
+          ></a>
+        </div> -->
+      </div>
+    </div>
+  </div>
+</div>

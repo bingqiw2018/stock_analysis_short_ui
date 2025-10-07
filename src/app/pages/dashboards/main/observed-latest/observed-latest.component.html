@@ -1,0 +1,21 @@
+<div class="row">
+  <div [class]="classLeft" style="padding:1px">
+    <div class="card">
+      <div class="card-body">
+        <ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '14px' }"></ngx-loading>
+        <div id="chart_observed_last"></div>
+      </div>
+    </div>
+  </div>
+  <!--end col-->
+  <div [class]="classRight" style="padding:1px">
+    <div class="card">
+      <div class="card-body">
+        <ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '14px' }"></ngx-loading>
+        <div id="chart_observed_last_coverage"></div>
+      </div>
+    </div>
+    <!--end card-->
+  </div>
+  <!--end col-->
+</div>

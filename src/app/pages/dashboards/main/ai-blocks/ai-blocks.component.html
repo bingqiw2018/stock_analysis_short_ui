@@ -1,0 +1,44 @@
+<div class="row">
+  <div class="col-xl-12">
+    <div class="card">
+      <div class="card-body" style="padding:0px;">
+        
+        <div class="d-flex">
+          <div class="me-2">
+            <h3 class="card-title mb-0">智能板块</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xl-3" style="padding:5px;">
+            <ngx-loading [show]="loadingNew" [config]="{ backdropBorderRadius: '14px' }"></ngx-loading>
+            <div class="title" (click)="goto(1)" style="margin-left:10px; cursor:pointer;">加入关注</div>
+            <div class="card-body" style="padding:0px;">
+              <app-chart-pie [items]="tableCoverageNew" [pieId]="chartPieNew"></app-chart-pie>
+            </div>
+          </div>
+          <div class="col-xl-3" style="padding:5px;">
+            <ngx-loading [show]="loadingUp" [config]="{ backdropBorderRadius: '14px' }"></ngx-loading>
+            <div class="title" (click)="goto(2)" style="margin-left:10px; cursor:pointer;">买入上涨</div>
+            <div class="card-body" style="padding:0px;">
+              <app-chart-pie [items]="tableCoverageUp" [pieId]="chartPieUp"></app-chart-pie>
+            </div>
+          </div>
+          <div class="col-xl-3" style="padding:5px;">
+            <ngx-loading [show]="loadingDown" [config]="{ backdropBorderRadius: '14px' }"></ngx-loading>
+            <div class="title" (click)="goto(3)" style="margin-left:10px; cursor:pointer;">买入回调</div>
+            <div class="card-body" style="padding:0px;">
+              <app-chart-pie [items]="tableCoverageDown" [pieId]="chartPieDown"></app-chart-pie>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-footer" style="padding-left:0px">
+        <button type="button" class="btn  btn-class" (click)="goto(4)">资金流转</button>
+        <button type="button" class="btn  btn-class" (click)="goto(6)">超跌反弹</button>
+        <button type="button" class="btn  btn-class" (click)="goto(7)">强弱分级</button>
+        <button type="button" class="btn  btn-class" (click)="goto(8)">多头趋势</button>
+        <button type="button" class="btn  btn-class" (click)="goto(5)">行业热点</button>
+      </div>
+    </div>
+  </div>
+</div>

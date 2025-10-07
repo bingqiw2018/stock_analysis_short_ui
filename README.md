@@ -1,1 +1,1 @@
-# stock_analysis_short_ui
+# stock_analysis_ui

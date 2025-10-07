@@ -1,0 +1,91 @@
+.ratio_up_true {
+    color: red;
+}
+
+.ratio_up_equal {
+    color: black;
+}
+
+.ratio_up_false {
+    color: green;
+}
+
+.stock_title {
+    font-size: 14px;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-bottom: 5px;
+    margin-top: -20px;
+}
+
+.stock_sub_title {
+    font-size: 12px;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.stock-sub-date-cell {
+    font-size: 12px;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width:90px;
+    margin-right: 0px;
+}
+
+.stock-sub-price-cell {
+    font-size: 12px;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    min-width:90px;
+    margin-right: 0px;
+}
+
+.stock_sub_title2 {
+    font-weight: bold;
+    color:cadetblue;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.chip {
+    width:100%
+}
+
+.div-col {
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.col-top {
+    padding-left: 5px;
+    padding-right: 5px;
+    min-width: fit-content;
+}
+
+.col-top2 {
+    padding-left: 5px;
+    padding-right: 5px;
+    min-width: fit-content;
+}
+
+.example-form-fields {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 10px;
+  margin-right: 20px;
+}
+
+.avg_line_level_class_up {
+    color: #9b2606;
+    font-size: 13px;
+    margin-left: 10px;
+    font-weight: bolder; 
+}
+
+.avg_line_level_class_down {
+    color: #069b10;
+    font-size: 13px;
+    margin-left: 10px;
+    font-weight: bolder; 
+}

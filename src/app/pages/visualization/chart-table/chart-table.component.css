@@ -1,0 +1,94 @@
+table {
+    min-width: 1180px;
+    width: 100%;
+}
+  
+.example-container {
+    /* max-width: 100%; */
+    overflow: auto;
+}
+
+.mat-mdc-form-field {
+  font-size: 12px;
+  /* width: 100%; */
+  color: whitesmoke;
+}
+
+.mat-mdc-row .mat-mdc-cell {
+  border-bottom: 1px solid transparent;
+  border-top: 1px solid transparent;
+  cursor: pointer;
+}
+
+.mat-mdc-row:hover .mat-mdc-cell {
+  border-color: currentColor;
+  border-top: 1px solid transparent;
+}
+
+.mdc-data-table__cell, .mdc-data-table__header-cell {
+  padding: 0 0 0 10px;
+}
+
+.demo-row-is-clicked {
+  font-weight: bold;
+}
+
+.table-title{
+  width: 80px; 
+  font-size: 12px; 
+  font-weight: bold;
+  padding: 5 0 0 10px;
+}
+
+.table-title-1{
+  max-width: 10px; 
+  font-size: 12px; 
+  padding: 5 0 0 10px;
+}
+
+.table-title-2{
+  width: 80px; 
+  font-size: 12px; 
+  font-weight: bold;
+  padding: 5 0 0 10px;
+}
+
+.table-title-3{
+  width: 105px; 
+  font-size: 12px; 
+  font-weight: bold;
+  padding: 5 0 0 10px;
+}
+
+.table-row{
+  font-size:12px; 
+  font-weight: bold;
+}
+
+.table-row-10{
+  font-size:10px; 
+  font-weight: bold;
+  height: 40px;
+}
+
+.table-row-price{
+  font-size: 12px; 
+  font-weight: bolder;
+}
+
+.mat-mdc-table .mdc-data-table__header-row {
+  height: 30px;
+}
+
+.mat-mdc-table .mdc-data-table__row {
+  height: 30px;
+}
+
+.card-body {
+  padding: 5px;
+}
+
+.table-td {
+  height:50px; 
+  border-bottom: 1px solid #732626;
+}

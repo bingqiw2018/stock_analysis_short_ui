@@ -1,0 +1,218 @@
+<div class="container-fluid" style="margin-top: -10px;">    
+  <div class="row">
+    <div class="col-xl-12" style="padding-left: 0px; padding-right: 0px;"> 
+      <ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '14px' }"></ngx-loading>     
+      <div class="card mb-1" >
+        <div class="card-body" style="padding-top: 5px; padding-bottom: 0px;">
+          <h4 class="card-title" [title]="cur_stock.name + ' (' + cur_stock.code+ ')'">
+            {{ cur_stock.name_title }} （{{ cur_stock.code_title }}） 
+            <span class="stock_sub_title mt-0 ">{{ cur_stock.observed_status }}</span>
+            <span class="stock_sub_title mt-0 {{avg_line_level_class}}">{{ avg_line_level }}</span>
+          </h4>
+        </div>
+        <div class="card-body" style="padding-top: 0px; padding-bottom: 5px;">
+          <div class="row">
+
+            <div class="col-sm-3 col-xl-2 example-form-fields">
+              <div style="margin-right: 20px;">
+                <p class="text-muted text-truncate mt-0 mb-0 stock_sub_title">最新日期</p>
+                <h4 class="stock-sub-date-cell mt-0 mb-0 mr-0">{{ cur_stock.date }}</h4>
+              </div>
+              <div style="margin-right: 20px;">
+                <p class="text-muted text-truncate mt-0 mb-0 stock_sub_title">最新收盘</p>
+                <h4 class="stock_sub_title mt-0 mb-0 {{cur_stock.ratio_up}}" >{{ cur_stock.end }}</h4>
+              </div>
+
+              <div style="margin-right: 20px;">
+                <p class="text-muted text-truncate mt-0 mb-0 stock_sub_title">关注日期</p>
+                <h4 class="stock-sub-date-cell mt-0 mb-0">{{ cur_stock.observed_add_date }}</h4>
+              </div>
+              <div style="margin-right: 20px;">
+                <p class="text-muted text-truncate mt-0 mb-0 stock_sub_title">关注价格</p>
+                <h4 class="stock_sub_title mt-0 mb-0">{{ cur_stock.observed_add_price }}</h4>
+              </div>
+            </div>
+
+            <div class="col-sm-3 col-xl-2 example-form-fields">
+              <div style="margin-right: 20px;">
+                <p class="text-muted text-truncate mt-0 mb-0 stock_sub_title">买入日期</p>
+                <h4 class="stock-sub-date-cell mt-0 mb-0">{{ cur_stock.observed_in_time }}</h4>
+              </div>
+              <div style="margin-right: 20px;">
+                <p class="text-muted text-truncate mt-0 mb-0 stock_sub_title">买入成本</p>
+                <h4 class="stock_sub_title mt-0 mb-0 ">{{ cur_stock.observed_in_price }}</h4>
+              </div>
+              <div style="margin-right: 20px;">
+                <p class="text-muted text-truncate mt-0 mb-0 stock_sub_title">清仓日期</p>
+                <h4 class="stock-sub-date-cell mt-0 mb-0">{{ cur_stock.observed_out_time }}</h4>
+              </div>
+              <div style="margin-right: 20px;">
+                <p class="text-muted text-truncate mt-0 mb-0 stock_sub_title">清仓成本</p>
+                <h4 class="stock_sub_title mt-0 mb-0">{{ cur_stock.observed_out_price }}</h4>
+              </div>
+            </div>
+
+            <div class="col-sm-12 col-xl-2 example-form-fields">
+              <div style="margin-right: 20px;">
+                <p class="text-muted text-truncate mb-0 mb-0 stock_sub_title">行业</p>
+                <h4 class="mb-2 stock_sub_title">{{ cur_stock.observed_industry }} </h4>
+              </div>
+              <div style="margin-right: 20px;">
+                <p class="text-muted text-truncate mb-0 mb-0 stock_sub_title">地区</p>
+                <h4 class="mb-2 stock_sub_title">{{ cur_stock.observed_region }} </h4>
+              </div>
+              <div style="margin-right: 20px; padding-right: 0px;">
+                <p class="text-muted text-truncate mb-0 mb-0 stock_sub_title">流通市值</p>
+                <h4 class="mb-2 stock_sub_title">{{ cur_stock.total_flow_value }} 亿</h4>
+              </div>
+              <div style="margin-right: 20px; padding-right: 0px;">
+                <p class="text-muted text-truncate mb-0 mb-0 stock_sub_title">市盈率(动)</p>
+                <h4 class="mb-2 stock_sub_title">{{ cur_stock.observed_per }}</h4>
+              </div>
+            </div>
+
+            
+            <div class="col-sm-12 col-xl-6 example-form-fields">
+              <div style="margin-right: 20px;">
+                <p class="text-muted text-truncate mt-0 mb-0 stock_sub_title">所属概念</p>
+                <h4 class="stock_sub_title mt-0 mb-0">{{ cur_stock.observed_blocks }}</h4>
+              </div>
+            </div>
+            <!-- <div class="col-1 col-top2">
+              <div>
+                <p class="text-muted text-truncate mb-0 mb-0 stock_sub_title">净利润</p>
+                <h4 class="mb-2 stock_sub_title">{{ cur_stock.observed_np }} </h4>
+              </div>
+            </div>
+            <div class="col-1 col-top2">
+              <div>
+                <p class="text-muted text-truncate mb-0 mb-0 stock_sub_title">金额</p>
+                <h4 class="mb-2 stock_sub_title">{{ cur_stock.end_price }} 亿</h4>
+              </div>
+            </div> -->
+          </div>
+          <div class="row">
+            
+            <!-- <div class="col-1 col-top2">
+              <div>
+                <p class="text-muted text-truncate mt-0 mb-0 stock_sub_title">关注成本</p>
+                <h4 class="mt-0 stock_sub_title">{{ cur_stock.observed_add_price }}</h4>
+              </div>
+            </div> -->
+            <div class="col-sm-4 col-xl-2  col-top3">
+              
+            </div>
+            <!-- <div class="col-1 col-top2">
+              <div>
+                <p class="text-muted text-truncate mt-0 mb-0 stock_sub_title">买入成本</p>
+                <h4 class="mt-0 stock_sub_title">{{ cur_stock.observed_in_price }}</h4>
+              </div>
+            </div> -->
+            <div class="col-sm-4 col-xl-2  col-top3">
+              
+            </div>
+            <!-- <div class="col-1 col-top2">
+              <div>
+                <p class="text-muted text-truncate mt-0 mb-0 stock_sub_title">卖出价格</p>
+                <h4 class="{{cur_stock.observed_out_price}} mt-0 stock_sub_title">{{ cur_stock.observed_out_price }} </h4>
+              </div>
+            </div> -->
+          </div>
+          
+        </div>
+      </div>
+    </div>    
+    <!-- Right side End-->
+    <div class="col-xl-12" style="padding-left: 0px; padding-right: 0px;">
+      <ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '14px' }"></ngx-loading>
+      <div class="card">
+        <div class="card-body"  id="card1" style="padding: 10px 10px 0px 5px;">
+          <div class="row">
+            <div class="col-xl-8" style="padding-right: 0px;">              
+              <div class="ms-auto mb-0">
+                <ul class="nav nav-pills">
+                  <li class="nav-item">
+                    <a class="nav-link {{min_15_active}}" style="font-size:12px" href="javascript:void(0);" (click)="onTimeSelector('min_15')">15分</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link {{min_60_active}}" style="font-size:12px" href="javascript:void(0);" (click)="onTimeSelector('min_60')">60分</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link {{day_active}}" style="font-size:12px" href="javascript:void(0);" (click)="onTimeSelector('day')">日</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link {{week_active}}" style="font-size:12px" href="javascript:void(0);" (click)="onTimeSelector('week')">周</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link {{month_active}}"style="font-size:12px"  href="javascript:void(0);" (click)="onTimeSelector('month')">月</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link {{year_active}}" style="font-size:12px" href="javascript:void(0);"  (click)="onTimeSelector('year')">年</a>
+                  </li>                  
+                </ul>
+              </div>
+              <div class="mt-0" style="padding-left: 0px; padding-right: 0px;">
+                <app-observed-chart [time_type]="time_type" (loading)="changeLoading($event)" (cur_chips)="changeChips($event)"></app-observed-chart>
+                
+              </div>
+            </div>
+            <div class="col-xl-4 " id="chip1" style="padding-left:0px; padding-right: 0px;">
+              <div class="row" style="margin-left:10px; margin-top:20px;">
+                <div class="col-2 col-top2">
+                  <div>
+                    <p class="text-muted text-truncate mt-0 mb-0 stock_sub_title">MACD</p>
+                    <h4 class="{{cur_stock.observed_macd_up}} mt-0 stock_sub_title">{{ cur_stock.observed_macd }}</h4>
+                  </div>
+                </div>   
+                <div class="col-2 col-top2">
+                  <div>
+                    <p class="text-muted text-truncate mt-0 mb-0 stock_sub_title">RSI</p>
+                    <h4 class="{{cur_stock.observed_rsi_up}} mt-0 stock_sub_title">{{ cur_stock.observed_rsi }}</h4>
+                  </div>
+                </div>
+                <div class="col-2 col-top2">
+                  <div>
+                    <p class="text-muted text-truncate mt-0 mb-0 stock_sub_title">KDJ</p>
+                    <h4 class="{{cur_stock.observed_kdj_up}} mt-0 stock_sub_title">{{ cur_stock.observed_kdj }}</h4>
+                  </div>
+                </div>
+                <!-- <div class="col-2 col-top2">
+                  <div>
+                    <p class="text-muted text-truncate mt-0 mb-0 stock_sub_title">开盘</p>
+                    <h4 class="{{cur_stock.ratio_up}} mt-0 stock_sub_title">{{ cur_stock.start }}</h4>
+                  </div>
+                </div>
+                <div class="col-2 col-top2">
+                  <div>
+                    <p class="text-muted text-truncate mt-0 mb-0 stock_sub_title">收盘</p>
+                    <h4 class="{{cur_stock.ratio_up}} mt-0 stock_sub_title">{{ cur_stock.end }}</h4>
+                  </div>
+                </div>
+                <div class="col-2 col-top2">
+                  <div>
+                    <p class="text-muted text-truncate mt-0 mb-0 stock_sub_title">涨幅</p>
+                    <h4 class="{{cur_stock.ratio_up}} mt-0 stock_sub_title" >{{ cur_stock.ratio }} %</h4>
+                  </div>
+                </div>
+                <div class="col-2 col-top2">
+                  <div>
+                    <p class="text-muted text-truncate mt-0 mb-0 stock_sub_title">换手</p>
+                    <h4 class="mb-0 stock_sub_title">{{ cur_stock.hand_ratio }} %</h4>
+                  </div>
+                </div> -->
+              </div>
+              <app-chips [chips]="cur_chips"></app-chips>
+            </div>
+          </div>
+          <!-- <h4 class="card-title ">趋势分析</h4> -->
+          <div class="row">
+            <div class="col-xl-12" >
+              <app-short-feature-chart [time_type]="time_type" (filterEvent)="changeAvgLineLevel($event)"></app-short-feature-chart>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Main Center End-->
+  </div>
+</div>
